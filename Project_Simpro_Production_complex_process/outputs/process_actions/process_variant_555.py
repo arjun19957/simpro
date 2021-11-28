@@ -1,0 +1,367 @@
+def action_plan(entity, process_scenario_object):
+
+
+    with process_scenario_object.econsultpoliklinisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.econsultpoliklinisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'econsultpoliklinisch' ])
+
+    with process_scenario_object.administratieftariefeerstepol_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.administratieftariefeerstepol() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'administratieftariefeerstepol' ])
+
+    with process_scenario_object.econsultpoliklinisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.econsultpoliklinisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'econsultpoliklinisch' ])
+
+    with process_scenario_object.administratieftariefeerstepol_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.administratieftariefeerstepol() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'administratieftariefeerstepol' ])
+
+    with process_scenario_object.coupeterinzage_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.coupeterinzage() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'coupeterinzage' ])
+
+    with process_scenario_object.telefonischconsult_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.telefonischconsult() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'telefonischconsult' ])
+
+    with process_scenario_object.ecgelektrocardiografie_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ecgelektrocardiografie() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ecgelektrocardiografie' ])
+
+    with process_scenario_object.teletherapiemegavoltfotonenbestrali_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.teletherapiemegavoltfotonenbestrali() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'teletherapiemegavoltfotonenbestrali' ])
+
+    with process_scenario_object.behandeltijdeenheidtmegavolt_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.behandeltijdeenheidtmegavolt() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'behandeltijdeenheidtmegavolt' ])
+
+    with process_scenario_object.hyperthermie_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.hyperthermie() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'hyperthermie' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.hemoglobinefotoelektrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.hemoglobinefotoelektrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'hemoglobinefotoelektrisch' ])
+
+    with process_scenario_object.amylase_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.amylase() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'amylase' ])
+
+    with process_scenario_object.creatinine_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.creatinine() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'creatinine' ])
+
+    with process_scenario_object.natriumvlamfotometrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.natriumvlamfotometrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'natriumvlamfotometrisch' ])
+
+    with process_scenario_object.kaliumpotentiometrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.kaliumpotentiometrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'kaliumpotentiometrisch' ])
+
+    with process_scenario_object.sgotasatkinetisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.sgotasatkinetisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'sgotasatkinetisch' ])
+
+    with process_scenario_object.leukocytentellenelektronisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.leukocytentellenelektronisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'leukocytentellenelektronisch' ])
+
+    with process_scenario_object.magnesiumaas_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.magnesiumaas() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'magnesiumaas' ])
+
+    with process_scenario_object.ordertarief_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ordertarief() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ordertarief' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.glucose_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.glucose() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'glucose' ])
+
+    with process_scenario_object.hemoglobinefotoelektrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.hemoglobinefotoelektrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'hemoglobinefotoelektrisch' ])
+
+    with process_scenario_object.natriumvlamfotometrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.natriumvlamfotometrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'natriumvlamfotometrisch' ])
+
+    with process_scenario_object.kaliumpotentiometrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.kaliumpotentiometrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'kaliumpotentiometrisch' ])
+
+    with process_scenario_object.magnesiumaas_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.magnesiumaas() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'magnesiumaas' ])
+
+    with process_scenario_object.ordertarief_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ordertarief() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ordertarief' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.ureum_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ureum() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ureum' ])
+
+    with process_scenario_object.creatinine_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.creatinine() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'creatinine' ])
+
+    with process_scenario_object.natriumvlamfotometrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.natriumvlamfotometrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'natriumvlamfotometrisch' ])
+
+    with process_scenario_object.kaliumpotentiometrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.kaliumpotentiometrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'kaliumpotentiometrisch' ])
+
+    with process_scenario_object.ordertarief_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ordertarief() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ordertarief' ])
+
+    with process_scenario_object.ligdagenallespecbehkindergreval_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ligdagenallespecbehkindergreval() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ligdagenallespecbehkindergreval' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.natriumvlamfotometrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.natriumvlamfotometrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'natriumvlamfotometrisch' ])
+
+    with process_scenario_object.kaliumpotentiometrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.kaliumpotentiometrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'kaliumpotentiometrisch' ])
+
+    with process_scenario_object.bloedgroepaboenrhesusfactor_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bloedgroepaboenrhesusfactor() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bloedgroepaboenrhesusfactor' ])
+
+    with process_scenario_object.bloedgroepaboenrhesusfactor_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bloedgroepaboenrhesusfactor() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bloedgroepaboenrhesusfactor' ])
+
+    with process_scenario_object.rhesusfactordcentrifugeermethodee_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.rhesusfactordcentrifugeermethodee() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'rhesusfactordcentrifugeermethodee' ])
+
+    with process_scenario_object.rhesusfactordcentrifugeermethodee_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.rhesusfactordcentrifugeermethodee() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'rhesusfactordcentrifugeermethodee' ])
+
+    with process_scenario_object.haemoglobinefotoelectrischspoed_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.haemoglobinefotoelectrischspoed() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'haemoglobinefotoelectrischspoed' ])
+
+    with process_scenario_object.screeningantistoffenerytrocyten_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.screeningantistoffenerytrocyten() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'screeningantistoffenerytrocyten' ])
+
+    with process_scenario_object.ordertarief_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ordertarief() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ordertarief' ])
+
+    with process_scenario_object.ordertarief_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ordertarief() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ordertarief' ])
+
+    with process_scenario_object.klinischeopnamea_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.klinischeopnamea() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'klinischeopnamea' ])
+
+    with process_scenario_object.klasseba_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.klasseba() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'klasseba' ])
+
+    with process_scenario_object.bovenregtoesla_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bovenregtoesla() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bovenregtoesla' ])
+
+    with process_scenario_object.ligdagenallespecbehkindergreval_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ligdagenallespecbehkindergreval() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ligdagenallespecbehkindergreval' ])
+
+    with process_scenario_object.anesthesiebijbehandelingmetradium_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.anesthesiebijbehandelingmetradium() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'anesthesiebijbehandelingmetradium' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.internationalnormalisedratiombvtromb_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.internationalnormalisedratiombvtromb() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'internationalnormalisedratiombvtromb' ])
+
+    with process_scenario_object.ordertarief_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ordertarief() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ordertarief' ])
+
+    with process_scenario_object.brachytherapieinterstitieelintensi_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.brachytherapieinterstitieelintensi() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'brachytherapieinterstitieelintensi' ])
+
+    with process_scenario_object.klasseba_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.klasseba() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'klasseba' ])
+
+    with process_scenario_object.bovenregtoesla_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bovenregtoesla() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bovenregtoesla' ])
+
+    with process_scenario_object.ligdagenallespecbehkindergreval_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ligdagenallespecbehkindergreval() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ligdagenallespecbehkindergreval' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.internationalnormalisedratiombvtromb_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.internationalnormalisedratiombvtromb() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'internationalnormalisedratiombvtromb' ])
+
+    with process_scenario_object.ordertarief_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ordertarief() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ordertarief' ])
+
+    with process_scenario_object.klasseba_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.klasseba() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'klasseba' ])
+
+    with process_scenario_object.bovenregtoesla_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bovenregtoesla() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bovenregtoesla' ])
+
+    with process_scenario_object.ligdagenallespecbehkindergreval_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ligdagenallespecbehkindergreval() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ligdagenallespecbehkindergreval' ])
+
+    with process_scenario_object.klasseba_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.klasseba() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'klasseba' ])
+
+    with process_scenario_object.bovenregtoesla_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bovenregtoesla() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bovenregtoesla' ])
+
+    with process_scenario_object.vervolgconsultpoliklinisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.vervolgconsultpoliklinisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'vervolgconsultpoliklinisch' ])
+
+    with process_scenario_object.vervolgconsultpoliklinisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.vervolgconsultpoliklinisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'vervolgconsultpoliklinisch' ])
+
+    with process_scenario_object.vervolgconsultpoliklinisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.vervolgconsultpoliklinisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'vervolgconsultpoliklinisch' ])

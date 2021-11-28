@@ -1,0 +1,5 @@
+{% for item in seq %}
+{% include "this_is_name.txt" %}
+{% endfor %}
+
+

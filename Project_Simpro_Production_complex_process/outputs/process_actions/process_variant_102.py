@@ -1,0 +1,197 @@
+def action_plan(entity, process_scenario_object):
+
+
+    with process_scenario_object.vervolgconsultpoliklinisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.vervolgconsultpoliklinisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'vervolgconsultpoliklinisch' ])
+
+    with process_scenario_object.administratieftariefeerstepol_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.administratieftariefeerstepol() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'administratieftariefeerstepol' ])
+
+    with process_scenario_object.vervolgconsultpoliklinisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.vervolgconsultpoliklinisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'vervolgconsultpoliklinisch' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.sediment_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.sediment() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'sediment' ])
+
+    with process_scenario_object.urineonderzoekkwalitatief_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.urineonderzoekkwalitatief() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'urineonderzoekkwalitatief' ])
+
+    with process_scenario_object.ordertarief_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ordertarief() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ordertarief' ])
+
+    with process_scenario_object.vervolgconsultpoliklinisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.vervolgconsultpoliklinisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'vervolgconsultpoliklinisch' ])
+
+    with process_scenario_object.mriabdomen_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.mriabdomen() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'mriabdomen' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.aannamelaboratoriumonderzoek_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.aannamelaboratoriumonderzoek() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'aannamelaboratoriumonderzoek' ])
+
+    with process_scenario_object.bilirubinegeconjugeerd_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bilirubinegeconjugeerd() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bilirubinegeconjugeerd' ])
+
+    with process_scenario_object.bilirubinetotaal_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bilirubinetotaal() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bilirubinetotaal' ])
+
+    with process_scenario_object.glucose_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.glucose() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'glucose' ])
+
+    with process_scenario_object.hemoglobinefotoelektrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.hemoglobinefotoelektrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'hemoglobinefotoelektrisch' ])
+
+    with process_scenario_object.creatinine_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.creatinine() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'creatinine' ])
+
+    with process_scenario_object.alkalischefosfatasekinetisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.alkalischefosfatasekinetisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'alkalischefosfatasekinetisch' ])
+
+    with process_scenario_object.kaliumpotentiometrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.kaliumpotentiometrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'kaliumpotentiometrisch' ])
+
+    with process_scenario_object.sgptalatkinetisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.sgptalatkinetisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'sgptalatkinetisch' ])
+
+    with process_scenario_object.microscopischonderzoekgekleurdenon_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.microscopischonderzoekgekleurdenon() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'microscopischonderzoekgekleurdenon' ])
+
+    with process_scenario_object.bacteriologischonderzoekmetkweeknie_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bacteriologischonderzoekmetkweeknie() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bacteriologischonderzoekmetkweeknie' ])
+
+    with process_scenario_object.bacteriologischonderzoekmetkweeknie_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bacteriologischonderzoekmetkweeknie() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bacteriologischonderzoekmetkweeknie' ])
+
+    with process_scenario_object.bacteriologischonderzoekmetkweeknie_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bacteriologischonderzoekmetkweeknie() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bacteriologischonderzoekmetkweeknie' ])
+
+    with process_scenario_object.bacteriologischonderzoekmetkweeknie_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bacteriologischonderzoekmetkweeknie() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bacteriologischonderzoekmetkweeknie' ])
+
+    with process_scenario_object.differentieletellingautomatisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.differentieletellingautomatisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'differentieletellingautomatisch' ])
+
+    with process_scenario_object.leukocytentellenelektronisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.leukocytentellenelektronisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'leukocytentellenelektronisch' ])
+
+    with process_scenario_object.gammaglutamyltranspeptidase_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.gammaglutamyltranspeptidase() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'gammaglutamyltranspeptidase' ])
+
+    with process_scenario_object.hepatitisbsurfaceantigeenconfirmatie_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.hepatitisbsurfaceantigeenconfirmatie() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'hepatitisbsurfaceantigeenconfirmatie' ])
+
+    with process_scenario_object.crpcreactiefproteine_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.crpcreactiefproteine() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'crpcreactiefproteine' ])
+
+    with process_scenario_object.albumine_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.albumine() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'albumine' ])
+
+    with process_scenario_object.cambvmeia_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.cambvmeia() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'cambvmeia' ])
+
+    with process_scenario_object.bezinkingssnelheidfotoelektrisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.bezinkingssnelheidfotoelektrisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'bezinkingssnelheidfotoelektrisch' ])
+
+    with process_scenario_object.ordertarief_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ordertarief() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ordertarief' ])
+
+    with process_scenario_object.ordertarief_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.ordertarief() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'ordertarief' ])
+
+    with process_scenario_object.vervolgconsultpoliklinisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.vervolgconsultpoliklinisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'vervolgconsultpoliklinisch' ])
+
+    with process_scenario_object.administratieftariefeerstepol_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.administratieftariefeerstepol() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'administratieftariefeerstepol' ])
+
+    with process_scenario_object.telefonischconsult_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.telefonischconsult() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'telefonischconsult' ])
+
+    with process_scenario_object.vervolgconsultpoliklinisch_resource.request() as request:
+        yield request
+        yield process_scenario_object.env.process( process_scenario_object.vervolgconsultpoliklinisch() )
+        process_scenario_object.log_list.append([entity, process_scenario_object.env.now, 'vervolgconsultpoliklinisch' ])

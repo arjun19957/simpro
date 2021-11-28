@@ -1,0 +1,16 @@
+{% for i in range(variant_count) %}
+import outputs.process_actions.process_variant_{{i}} as pv_{{i}}
+{% endfor %}
+
+
+class action_plan_definer():
+   
+   def __init__(self):
+        self.action_plan_list = []
+
+action_plan_definer_instance = action_plan_definer()
+
+
+{% for i in range(variant_count) %}
+action_plan_definer_instance.action_plan_list.append(pv_{{i}}.action_plan)
+{% endfor %}

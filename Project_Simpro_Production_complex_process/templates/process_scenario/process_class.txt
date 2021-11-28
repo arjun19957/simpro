@@ -1,0 +1,14 @@
+import simpy
+
+class process_definition():
+
+    def __init__(self,env):
+        self.env = env
+        self.log_list = []
+        {% for step_name in list_of_steps %}
+        self.{{step_name}}_resource = simpy.Resource(env, capacity = 1)
+        {% endfor %}
+    
+    {% for step_name in list_of_steps %}
+    {% include "process_scenario/process_action.txt" %} 
+    {% endfor %}

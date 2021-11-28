@@ -1,0 +1,5 @@
+def action_plan(entity, process_scenario_object):
+
+{% for step in list_of_steps %}
+    {% include "process_actions/action_components.txt" %}
+{% endfor %}
